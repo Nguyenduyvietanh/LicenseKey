@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import ButtonCancel from "../../../components/Button/ButtonCancel";
 import ButtonSubmit from "../../../components/Button/ButtonSubmit";
 
@@ -104,7 +104,9 @@ const LicenseKeyList = () => {
                     <td className="py-2 px-6 text-center">
                       <div className="flex item-center justify-center">
                         <div className="mr-2 transform  hover:scale-110">
-                          <i class="fas fa-pencil-alt w-9 h-9 stroke-current text-purple-600 bg-purple-100 rounded-full pt-[11px]"></i>
+                          <Link to="/license-key/edit/1">
+                            <i class="fas fa-pencil-alt w-9 h-9 stroke-current text-purple-600 bg-purple-100 rounded-full pt-[11px]"></i>
+                          </Link>
                         </div>
                         <div className="mr-2 transform  hover:scale-110">
                           <i class="fas fa-trash-alt w-9 h-9 stroke-current text-red-600 bg-red-100 rounded-full pt-[11px]"></i>

@@ -1,9 +1,9 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import ButtonCancel from "../../../components/Button/ButtonCancel";
 import ButtonSubmit from "../../../components/Button/ButtonSubmit";
 
-const RoleList = () => {
+const OrganizationList = () => {
   return (
     <>
       <div className="overflow-x-auto mt-2 mb-10">
@@ -11,7 +11,7 @@ const RoleList = () => {
           <div className="w-full">
             <div className="w-full mb-3 flex justify-between">
               <div>
-                <NavLink to="/role/add">
+                <NavLink to="/organization/add">
                   <ButtonSubmit
                     iconButton={<i class="fas fa-plus pr-[15px]"></i>}
                     titleButton="Thêm mới"
@@ -59,8 +59,7 @@ const RoleList = () => {
                 <thead>
                   <tr className="bg-blue-100 text-gray-600 uppercase text-sm leading-normal">
                     <th className="py-3 px-6 text-center w-[80px]">STT</th>
-                    <th className="py-3 px-6 text-left">Tên vai trò</th>
-                    <th className="py-3 px-6 text-center">Mã vai trò</th>
+                    <th className="py-3 px-6 text-left">Tên tổ chức</th>
                     <th className="py-3 px-6 text-center">Actions</th>
                   </tr>
                 </thead>
@@ -68,17 +67,12 @@ const RoleList = () => {
                   <tr className="border-b border-gray-200 hover:bg-gray-100">
                     <td className="py-2 px-6 text-center">1</td>
                     <td className="py-2 px-6 text-left ">
-                      <span className="font-medium">Ban lãnh đạo</span>
-                    </td>
-                    <td className="py-2 px-6 text-center">
-                      <span className="font-medium">1</span>
+                      <span className="font-medium">Công an Hà Nội</span>
                     </td>
                     <td className="py-2 px-6 text-center">
                       <div className="flex item-center justify-center">
                         <div className="mr-2 transform  hover:scale-110">
-                          <Link to="/role/edit/1">
-                            <i class="fas fa-pencil-alt w-9 h-9 stroke-current text-purple-600 bg-purple-100 rounded-full pt-[11px]"></i>
-                          </Link>
+                          <i class="fas fa-pencil-alt w-9 h-9 stroke-current text-purple-600 bg-purple-100 rounded-full pt-[11px]"></i>
                         </div>
                         <div className="mr-2 transform  hover:scale-110">
                           <i class="fas fa-trash-alt w-9 h-9 stroke-current text-red-600 bg-red-100 rounded-full pt-[11px]"></i>
@@ -89,17 +83,12 @@ const RoleList = () => {
                   <tr className="border-b border-gray-200 hover:bg-gray-100">
                     <td className="py-2 px-6 text-center">2</td>
                     <td className="py-2 px-6 text-left ">
-                      <span className="font-medium">Trưởng phòng</span>
-                    </td>
-                    <td className="py-2 px-6 text-center">
-                      <span className="font-medium">2</span>
+                      <span className="font-medium">Công an Sài Gòn</span>
                     </td>
                     <td className="py-2 px-6 text-center">
                       <div className="flex item-center justify-center">
                         <div className="mr-2 transform  hover:scale-110">
-                          <Link to="/role/edit/2">
-                            <i class="fas fa-pencil-alt w-9 h-9 stroke-current text-purple-600 bg-purple-100 rounded-full pt-[11px]"></i>
-                          </Link>
+                          <i class="fas fa-pencil-alt w-9 h-9 stroke-current text-purple-600 bg-purple-100 rounded-full pt-[11px]"></i>
                         </div>
                         <div className="mr-2 transform  hover:scale-110">
                           <i class="fas fa-trash-alt w-9 h-9 stroke-current text-red-600 bg-red-100 rounded-full pt-[11px]"></i>
@@ -110,10 +99,7 @@ const RoleList = () => {
                   <tr className="border-b border-gray-200 hover:bg-gray-100">
                     <td className="py-2 px-6 text-center">3</td>
                     <td className="py-2 px-6 text-left ">
-                      <span className="font-medium">Phó phòng</span>
-                    </td>
-                    <td className="py-2 px-6 text-center">
-                      <span className="font-medium">3</span>
+                      <span className="font-medium">Công an Đà Nẵng</span>
                     </td>
                     <td className="py-2 px-6 text-center">
                       <div className="flex item-center justify-center">
@@ -129,10 +115,23 @@ const RoleList = () => {
                   <tr className="border-b border-gray-200 hover:bg-gray-100">
                     <td className="py-2 px-6 text-center">4</td>
                     <td className="py-2 px-6 text-left ">
-                      <span className="font-medium">Nhân viên</span>
+                      <span className="font-medium">Công an Hải Phòng</span>
                     </td>
                     <td className="py-2 px-6 text-center">
-                      <span className="font-medium">4</span>
+                      <div className="flex item-center justify-center">
+                        <div className="mr-2 transform  hover:scale-110">
+                          <i class="fas fa-pencil-alt w-9 h-9 stroke-current text-purple-600 bg-purple-100 rounded-full pt-[11px]"></i>
+                        </div>
+                        <div className="mr-2 transform  hover:scale-110">
+                          <i class="fas fa-trash-alt w-9 h-9 stroke-current text-red-600 bg-red-100 rounded-full pt-[11px]"></i>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr className="border-b border-gray-200 hover:bg-gray-100">
+                    <td className="py-2 px-6 text-center">5</td>
+                    <td className="py-2 px-6 text-left ">
+                      <span className="font-medium">Công an Bắc Ninh</span>
                     </td>
                     <td className="py-2 px-6 text-center">
                       <div className="flex item-center justify-center">
@@ -155,4 +154,4 @@ const RoleList = () => {
   );
 };
 
-export default RoleList;
+export default OrganizationList;

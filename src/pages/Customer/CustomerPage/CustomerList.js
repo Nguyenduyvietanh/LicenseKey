@@ -1,5 +1,8 @@
+import { Switch } from "antd";
 import React from "react";
-import ButtonAdd from "../../../components/Button/Button";
+import { NavLink } from "react-router-dom";
+import ButtonCancel from "../../../components/Button/ButtonCancel";
+import ButtonSubmit from "./../../../components/Button/ButtonSubmit";
 
 const CustomerList = () => {
   return (
@@ -9,7 +12,12 @@ const CustomerList = () => {
           <div className="w-full">
             <div className="w-full mb-3 flex justify-between">
               <div>
-                <ButtonAdd />
+                <NavLink to="/customer/add">
+                  <ButtonSubmit
+                    iconButton={<i class="fas fa-plus pr-[15px]"></i>}
+                    titleButton="Thêm mới"
+                  />
+                </NavLink>
               </div>
               <div className="flex justify-end">
                 <div className="w-[200px] pt-[2px] mr-2">
@@ -43,9 +51,7 @@ const CustomerList = () => {
                   </svg>
                 </div>
                 <div className="ml-3">
-                  <button className="custom-btn btn-add" style={{ width: "110px", height: "40px" }}>
-                    Huỷ bỏ
-                  </button>
+                  <ButtonCancel />
                 </div>
               </div>
             </div>
@@ -58,8 +64,8 @@ const CustomerList = () => {
                     <th className="py-3 px-6 text-left">Ảnh</th>
                     <th className="py-3 px-6 text-left">Số điện thoại</th>
                     <th className="py-3 px-6 text-left">Email</th>
-                    <th className="py-3 px-6 text-left">Phòng ban</th>
-                    <th className="py-3 px-6 text-left">Tổ chức</th>
+                    <th className="py-3 px-6 text-center">Phòng ban</th>
+                    <th className="py-3 px-6 text-center">Tổ chức</th>
                     <th className="py-3 px-6 text-center">Sản phẩm</th>
                     <th className="py-3 px-6 text-center">Độ ưu tiên</th>
                     <th className="py-3 px-6 text-center">Trạng thái</th>
@@ -84,17 +90,22 @@ const CustomerList = () => {
                     <td className="py-2 px-6 text-left">
                       <span className="font-medium">vietanhdeptrai@gmail.com</span>
                     </td>
-                    <td className="py-2 px-6 text-left ">
-                      <span className="font-medium">Phòng dịch vụ</span>
+                    <td className="py-2 px-6 text-center ">
+                      <span className="font-medium">C01</span>
                     </td>
                     <td className="py-2 px-6 text-left ">
-                      <span className="font-medium">Công ty HTI</span>
+                      <span className="font-medium">Công an HN</span>
                     </td>
-                    <td className="py-2 px-6 text-left ">
+                    <td className="py-2 px-6 text-center ">
                       <span className="font-medium">VideoInsight</span>
                     </td>
-                    <td className="py-2 px-6 text-left ">
-                      <span className="font-medium">Độ ưu tiên</span>
+                    <td className="py-2 px-6 text-center ">
+                      <span className="bg-purple-200 text-purple-600 py-1 px-3 rounded-full font-medium">
+                        Rất Chuẩn
+                      </span>
+                    </td>
+                    <td className="py-2 px-6 text-center ">
+                      <Switch checked />
                     </td>
                     <td className="py-2 px-6 text-center">
                       <div className="flex item-center justify-center">
@@ -118,13 +129,28 @@ const CustomerList = () => {
                         src="https://event.mediacdn.vn/2020/10/20/tran-thanh-p-16031678576061691914167.png"
                       />
                     </td>
-                    <td className="py-2 px-6 text-left">
-                      <span className="font-medium">tranthanhvippro@gmail.com</span>
+                    <td className="py-2 px-6 text-left ">
+                      <span className="font-medium">0960089999</span>
                     </td>
-                    <td className="py-2 px-6 text-center">
-                      <span className="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">
-                        Admin
+                    <td className="py-2 px-6 text-left">
+                      <span className="font-medium">vietanhdeptrai@gmail.com</span>
+                    </td>
+                    <td className="py-2 px-6 text-center ">
+                      <span className="font-medium">C01</span>
+                    </td>
+                    <td className="py-2 px-6 text-left ">
+                      <span className="font-medium">Công an BN</span>
+                    </td>
+                    <td className="py-2 px-6 text-center ">
+                      <span className="font-medium">Hface</span>
+                    </td>
+                    <td className="py-2 px-6 text-center ">
+                      <span className="bg-red-300 text-red-600 py-1 px-3 rounded-full font-medium">
+                        Hỏi dò
                       </span>
+                    </td>
+                    <td className="py-2 px-6 text-center ">
+                      <Switch />
                     </td>
                     <td className="py-2 px-6 text-center">
                       <div className="flex item-center justify-center">
@@ -148,13 +174,28 @@ const CustomerList = () => {
                         src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Kh%C3%A1_B%E1%BA%A3nh_khai_tr%C6%B0%C6%A1ng_shop_b%C3%A1n_qu%E1%BA%A7n_%C3%A1o_%E1%BB%9F_Qu%E1%BB%91c_Oai_2019-03-16.png"
                       />
                     </td>
-                    <td className="py-2 px-6 text-left">
-                      <span className="font-medium">khabanh@gmail.com</span>
+                    <td className="py-2 px-6 text-left ">
+                      <span className="font-medium">0854563152</span>
                     </td>
-                    <td className="py-2 px-6 text-center">
-                      <span className="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full text-xs">
-                        Customer
+                    <td className="py-2 px-6 text-left">
+                      <span className="font-medium">vietanhdeptrai@gmail.com</span>
+                    </td>
+                    <td className="py-2 px-6 text-center ">
+                      <span className="font-medium">C01</span>
+                    </td>
+                    <td className="py-2 px-6 text-left ">
+                      <span className="font-medium">Công an SG</span>
+                    </td>
+                    <td className="py-2 px-6 text-center ">
+                      <span className="font-medium">Novaland</span>
+                    </td>
+                    <td className="py-2 px-6 text-center ">
+                      <span className="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full font-medium">
+                        Bình thường
                       </span>
+                    </td>
+                    <td className="py-2 px-6 text-center ">
+                      <Switch checked />
                     </td>
                     <td className="py-2 px-6 text-center">
                       <div className="flex item-center justify-center">
@@ -178,13 +219,28 @@ const CustomerList = () => {
                         src="https://randomuser.me/api/portraits/men/1.jpg"
                       />
                     </td>
+                    <td className="py-2 px-6 text-left ">
+                      <span className="font-medium">08596413466</span>
+                    </td>
                     <td className="py-2 px-6 text-left">
                       <span className="font-medium">vietanhdeptrai@gmail.com</span>
                     </td>
-                    <td className="py-2 px-6 text-center">
-                      <span className="bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs">
-                        SuperAdmin
+                    <td className="py-2 px-6 text-center ">
+                      <span className="font-medium">C01</span>
+                    </td>
+                    <td className="py-2 px-6 text-left ">
+                      <span className="font-medium">Công an SG</span>
+                    </td>
+                    <td className="py-2 px-6 text-center ">
+                      <span className="font-medium">Hface</span>
+                    </td>
+                    <td className="py-2 px-6 text-center ">
+                      <span className="bg-purple-200 text-purple-600 py-1 px-3 rounded-full font-medium">
+                        Rất Chuẩn
                       </span>
+                    </td>
+                    <td className="py-2 px-6 text-center ">
+                      <Switch />
                     </td>
                     <td className="py-2 px-6 text-center">
                       <div className="flex item-center justify-center">
@@ -208,13 +264,28 @@ const CustomerList = () => {
                         src="https://event.mediacdn.vn/2020/10/20/tran-thanh-p-16031678576061691914167.png"
                       />
                     </td>
-                    <td className="py-2 px-6 text-left">
-                      <span className="font-medium">tranthanhvippro@gmail.com</span>
+                    <td className="py-2 px-6 text-left ">
+                      <span className="font-medium">0845298755</span>
                     </td>
-                    <td className="py-2 px-6 text-center">
-                      <span className="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">
-                        Admin
+                    <td className="py-2 px-6 text-left">
+                      <span className="font-medium">vietanhdeptrai@gmail.com</span>
+                    </td>
+                    <td className="py-2 px-6 text-center ">
+                      <span className="font-medium">C01</span>
+                    </td>
+                    <td className="py-2 px-6 text-left ">
+                      <span className="font-medium">Công an HN</span>
+                    </td>
+                    <td className="py-2 px-6 text-center ">
+                      <span className="font-medium">Novaland</span>
+                    </td>
+                    <td className="py-2 px-6 text-center ">
+                      <span className="bg-purple-200 text-purple-600 py-1 px-3 rounded-full font-medium">
+                        Rất Chuẩn
                       </span>
+                    </td>
+                    <td className="py-2 px-6 text-center ">
+                      <Switch checked />
                     </td>
                     <td className="py-2 px-6 text-center">
                       <div className="flex item-center justify-center">
@@ -238,13 +309,28 @@ const CustomerList = () => {
                         src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Kh%C3%A1_B%E1%BA%A3nh_khai_tr%C6%B0%C6%A1ng_shop_b%C3%A1n_qu%E1%BA%A7n_%C3%A1o_%E1%BB%9F_Qu%E1%BB%91c_Oai_2019-03-16.png"
                       />
                     </td>
-                    <td className="py-2 px-6 text-left">
-                      <span className="font-medium">khabanh@gmail.com</span>
+                    <td className="py-2 px-6 text-left ">
+                      <span className="font-medium">085974145</span>
                     </td>
-                    <td className="py-2 px-6 text-center">
-                      <span className="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full text-xs">
-                        Customer
+                    <td className="py-2 px-6 text-left">
+                      <span className="font-medium">ngobakha@gmail.com</span>
+                    </td>
+                    <td className="py-2 px-6 text-center ">
+                      <span className="font-medium">C01</span>
+                    </td>
+                    <td className="py-2 px-6 text-left ">
+                      <span className="font-medium">Công an SG</span>
+                    </td>
+                    <td className="py-2 px-6 text-center ">
+                      <span className="font-medium">Hface</span>
+                    </td>
+                    <td className="py-2 px-6 text-center ">
+                      <span className="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full font-medium">
+                        Bình thường
                       </span>
+                    </td>
+                    <td className="py-2 px-6 text-center ">
+                      <Switch checked />
                     </td>
                     <td className="py-2 px-6 text-center">
                       <div className="flex item-center justify-center">
@@ -268,103 +354,28 @@ const CustomerList = () => {
                         src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Kh%C3%A1_B%E1%BA%A3nh_khai_tr%C6%B0%C6%A1ng_shop_b%C3%A1n_qu%E1%BA%A7n_%C3%A1o_%E1%BB%9F_Qu%E1%BB%91c_Oai_2019-03-16.png"
                       />
                     </td>
-                    <td className="py-2 px-6 text-left">
-                      <span className="font-medium">khabanh@gmail.com</span>
-                    </td>
-                    <td className="py-2 px-6 text-center">
-                      <span className="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full text-xs">
-                        Customer
-                      </span>
-                    </td>
-                    <td className="py-2 px-6 text-center">
-                      <div className="flex item-center justify-center">
-                        <div className="mr-2 transform  hover:scale-110">
-                          <i class="fas fa-pencil-alt w-9 h-9 stroke-current text-purple-600 bg-purple-100 rounded-full pt-[11px]"></i>
-                        </div>
-                        <div className="mr-2 transform  hover:scale-110">
-                          <i class="fas fa-trash-alt w-9 h-9 stroke-current text-red-600 bg-red-100 rounded-full pt-[11px]"></i>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr className="border-b border-gray-200 hover:bg-gray-100">
-                    <td className="py-2 px-6 text-center">8</td>
                     <td className="py-2 px-6 text-left ">
-                      <span className="font-medium">Nguyễn Duy Việt Anh</span>
-                    </td>
-                    <td className="py-2 px-6 text-left">
-                      <img
-                        className="w-[35px] h-[35px] rounded-full"
-                        src="https://randomuser.me/api/portraits/men/1.jpg"
-                      />
+                      <span className="font-medium">0859850000</span>
                     </td>
                     <td className="py-2 px-6 text-left">
                       <span className="font-medium">vietanhdeptrai@gmail.com</span>
                     </td>
-                    <td className="py-2 px-6 text-center">
-                      <span className="bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs">
-                        SuperAdmin
-                      </span>
+                    <td className="py-2 px-6 text-center ">
+                      <span className="font-medium">C01</span>
                     </td>
-                    <td className="py-2 px-6 text-center">
-                      <div className="flex item-center justify-center">
-                        <div className="mr-2 transform  hover:scale-110">
-                          <i class="fas fa-pencil-alt w-9 h-9 stroke-current text-purple-600 bg-purple-100 rounded-full pt-[11px]"></i>
-                        </div>
-                        <div className="mr-2 transform  hover:scale-110">
-                          <i class="fas fa-trash-alt w-9 h-9 stroke-current text-red-600 bg-red-100 rounded-full pt-[11px]"></i>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr className="border-b border-gray-200 hover:bg-gray-100">
-                    <td className="py-2 px-6 text-center">9</td>
                     <td className="py-2 px-6 text-left ">
-                      <span className="font-medium">Trấn thành</span>
+                      <span className="font-medium">Công an HN</span>
                     </td>
-                    <td className="py-2 px-6 text-left">
-                      <img
-                        className="w-[35px] h-[35px] rounded-full"
-                        src="https://event.mediacdn.vn/2020/10/20/tran-thanh-p-16031678576061691914167.png"
-                      />
+                    <td className="py-2 px-6 text-center ">
+                      <span className="font-medium">Hface</span>
                     </td>
-                    <td className="py-2 px-6 text-left">
-                      <span className="font-medium">tranthanhvippro@gmail.com</span>
-                    </td>
-                    <td className="py-2 px-6 text-center">
-                      <span className="bg-green-200 text-green-600 py-1 px-3 rounded-full text-xs">
-                        Admin
+                    <td className="py-2 px-6 text-center ">
+                      <span className="bg-red-300 text-red-600 py-1 px-3 rounded-full font-medium">
+                        Hỏi dò
                       </span>
                     </td>
-                    <td className="py-2 px-6 text-center">
-                      <div className="flex item-center justify-center">
-                        <div className="mr-2 transform  hover:scale-110">
-                          <i class="fas fa-pencil-alt w-9 h-9 stroke-current text-purple-600 bg-purple-100 rounded-full pt-[11px]"></i>
-                        </div>
-                        <div className="mr-2 transform  hover:scale-110">
-                          <i class="fas fa-trash-alt w-9 h-9 stroke-current text-red-600 bg-red-100 rounded-full pt-[11px]"></i>
-                        </div>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr className="border-b border-gray-200 hover:bg-gray-100">
-                    <td className="py-2 px-6 text-center">10</td>
-                    <td className="py-2 px-6 text-left ">
-                      <span className="font-medium">Ngô Bá Khá</span>
-                    </td>
-                    <td className="py-2 px-6 text-left">
-                      <img
-                        className="w-[35px] h-[35px] rounded-full"
-                        src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Kh%C3%A1_B%E1%BA%A3nh_khai_tr%C6%B0%C6%A1ng_shop_b%C3%A1n_qu%E1%BA%A7n_%C3%A1o_%E1%BB%9F_Qu%E1%BB%91c_Oai_2019-03-16.png"
-                      />
-                    </td>
-                    <td className="py-2 px-6 text-left">
-                      <span className="font-medium">khabanh@gmail.com</span>
-                    </td>
-                    <td className="py-2 px-6 text-center">
-                      <span className="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full text-xs">
-                        Customer
-                      </span>
+                    <td className="py-2 px-6 text-center ">
+                      <Switch />
                     </td>
                     <td className="py-2 px-6 text-center">
                       <div className="flex item-center justify-center">

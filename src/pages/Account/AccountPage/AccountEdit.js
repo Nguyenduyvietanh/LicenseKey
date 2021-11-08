@@ -70,9 +70,10 @@ const AccountEdit = () => {
                       className="  border h-[40px] pl-[10px] pr-8 rounded-md w-full hover:ring-2 hover:ring-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                       value="2"
                     >
-                      <option value="1">Customer</option>
-                      <option value="2">Admin</option>
-                      <option value="3">SuperAdmin</option>
+                      <option value="1">Ban lãnh đạo</option>
+                      <option value="2">Trưởng phòng</option>
+                      <option value="3">Phó phòng</option>
+                      <option value="4">Nhân viên</option>
                     </select>
                   </div>
                 </div>

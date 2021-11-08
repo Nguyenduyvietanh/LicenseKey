@@ -192,20 +192,20 @@ const _nav = [
   {
     _tag: "CSidebarNavDropdown",
     name: "Sản Phẩm",
-    route: "/products",
+    route: "/product",
     icon: <i class="fas fa-copy pr-[30px]" style={{ maxWidth: "40px" }}></i>,
     _children: [
       {
         _tag: "CSidebarNavItem",
         icon: <i class="fas fa-list-ul pr-2 text-center"></i>,
         name: "Danh sách",
-        to: "/products",
+        to: "/product",
       },
       {
         _tag: "CSidebarNavItem",
         icon: <i class="fas fa-plus pr-2 text-center"></i>,
         name: "Thêm mới",
-        to: "/products/add",
+        to: "/product/add",
       },
     ],
   },

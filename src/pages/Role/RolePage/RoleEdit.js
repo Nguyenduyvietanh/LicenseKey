@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { NavLink } from "react-router-dom";
 import ButtonCancel from "../../../components/Button/ButtonCancel";
 import ButtonSubmit from "../../../components/Button/ButtonSubmit";
-const RoleAdd = () => {
+const RoleEdit = () => {
   const { handleSubmit, register } = useForm();
   const onSubmit = async (data) => {
     console.log(data);
@@ -23,6 +23,7 @@ const RoleAdd = () => {
                   className="border pl-[10px] w-full h-[40px] rounded-[6px] hover:ring-2 hover:ring-purple-300 focus:outline-none focus:ring-2  focus:ring-purple-600 focus:border-transparent"
                   type="text"
                   placeholder="Tên vai trò"
+                  value="Ban lãnh đạo"
                   {...register("title", { required: true })}
                 />
               </div>
@@ -34,6 +35,7 @@ const RoleAdd = () => {
                   className="border pl-[10px] w-full h-[40px] rounded-[6px] hover:ring-2 hover:ring-purple-300 focus:outline-none focus:ring-2  focus:ring-purple-600 focus:border-transparent"
                   type="text"
                   placeholder="Mã vai trò"
+                  value="1"
                   {...register("roleCode", { required: true })}
                 />
               </div>
@@ -55,4 +57,4 @@ const RoleAdd = () => {
   );
 };
 
-export default RoleAdd;
+export default RoleEdit;

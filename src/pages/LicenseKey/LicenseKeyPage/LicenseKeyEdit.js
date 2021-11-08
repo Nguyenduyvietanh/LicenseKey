@@ -5,7 +5,7 @@ import ButtonSubmit from "./../../../components/Button/ButtonSubmit";
 import { NavLink } from "react-router-dom";
 
 const { RangePicker } = DatePicker;
-const LicenseKeyAdd = () => {
+const LicenseKeyEdit = () => {
   return (
     <>
       <div className="flex justify-center ">
@@ -95,4 +95,4 @@ const LicenseKeyAdd = () => {
   );
 };
 
-export default LicenseKeyAdd;
+export default LicenseKeyEdit;

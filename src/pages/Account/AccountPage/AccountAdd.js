@@ -31,7 +31,7 @@ const AccountAdd = () => {
           className="w-5/6 border-2 border-gray-200 overflow-hidden shadow-lg bg-white rounded-[10px]"
         >
           <div className="grid grid-cols-7 gap-[10px] mx-[100px] mt-[50px]">
-            <div className=" col-span-5">
+            <div className="col-span-5">
               <div className="flex flex-wrap mb-6">
                 <div className="w-full md:w-1/2 px-3 ">
                   <label className=" text-gray-700 text-sm font-bold mb-2">Username</label>
@@ -108,11 +108,12 @@ const AccountAdd = () => {
                     <select
                       {...register("role", { required: true })}
                       className="  border h-[40px] pl-[10px] pr-8 rounded-md w-full hover:ring-2 hover:ring-purple-300 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
-                      defaultValue="1"
+                      defaultValue="2"
                     >
-                      <option value="1">Customer</option>
-                      <option value="2">Admin</option>
-                      <option value="3">SuperAdmin</option>
+                      <option value="1">Ban lãnh đạo</option>
+                      <option value="2">Trưởng phòng</option>
+                      <option value="3">Phó phòng</option>
+                      <option value="4">Nhân viên</option>
                     </select>
                     <div className="mt-1 h-[10px]">
                       <span className="text-red-500">

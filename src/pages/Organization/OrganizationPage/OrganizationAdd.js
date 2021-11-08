@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { NavLink } from "react-router-dom";
 import ButtonCancel from "../../../components/Button/ButtonCancel";
 import ButtonSubmit from "../../../components/Button/ButtonSubmit";
-const RoleAdd = () => {
+const OrganizationAdd = () => {
   const { handleSubmit, register } = useForm();
   const onSubmit = async (data) => {
     console.log(data);
@@ -15,26 +15,15 @@ const RoleAdd = () => {
           onSubmit={handleSubmit(onSubmit)}
           className="w-full lg:w-1/2 border-2 border-gray-200 overflow-hidden shadow-lg bg-white rounded-[10px]"
         >
-          <div className="mx-[70px] lg:mx-[100px] mt-[50px]">
+          <div className=" mx-[100px] mt-[50px]">
             <div className="flex flex-wrap mb-8">
-              <div className="w-full">
-                <label className=" text-gray-700 text-sm font-bold mb-2">Tên Vai trò</label>
+              <div className="w-full px-3 ">
+                <label className=" text-gray-700 text-sm font-bold mb-2">Tên tổ chức</label>
                 <input
                   className="border pl-[10px] w-full h-[40px] rounded-[6px] hover:ring-2 hover:ring-purple-300 focus:outline-none focus:ring-2  focus:ring-purple-600 focus:border-transparent"
                   type="text"
-                  placeholder="Tên vai trò"
+                  placeholder="Tên tổ chức"
                   {...register("title", { required: true })}
-                />
-              </div>
-            </div>
-            <div className="flex flex-wrap mb-8">
-              <div className="w-full">
-                <label className=" text-gray-700 text-sm font-bold mb-2">Mã vai trò</label>
-                <input
-                  className="border pl-[10px] w-full h-[40px] rounded-[6px] hover:ring-2 hover:ring-purple-300 focus:outline-none focus:ring-2  focus:ring-purple-600 focus:border-transparent"
-                  type="text"
-                  placeholder="Mã vai trò"
-                  {...register("roleCode", { required: true })}
                 />
               </div>
             </div>
@@ -43,7 +32,7 @@ const RoleAdd = () => {
                 <ButtonSubmit titleButton="Xác nhận" />
               </div>
               <div className="mx-2">
-                <NavLink to="/role">
+                <NavLink to="/organization">
                   <ButtonCancel />
                 </NavLink>
               </div>
@@ -55,4 +44,4 @@ const RoleAdd = () => {
   );
 };
 
-export default RoleAdd;
+export default OrganizationAdd;
