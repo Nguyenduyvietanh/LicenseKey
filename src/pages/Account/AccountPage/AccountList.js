@@ -1,10 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import { Image } from "antd";
 import { Link, NavLink } from "react-router-dom";
 import ButtonSubmit from "./../../../components/Button/ButtonSubmit";
 import ButtonCancel from "../../../components/Button/ButtonCancel";
+import TableAdmin from "./../../../components/Table/TableAdmin";
 
 const AccountList = () => {
+  const columns = [
+    { dataIndex: "name", title: "Họ và tên" },
+    { dataIndex: "email", title: "Địa chỉ email" },
+    {
+      dataIndex: "imageUrl",
+      title: "Ảnh đại diện",
+      render: (value) => (
+        <Image src={value} width="50px" height="50px" alt="" />
+      ),
+    },
+  ];
+  const dataTable = [
+    {
+      id: 1,
+      name: "vietanh",
+      email: "vietanh@gmail.com",
+      imageUrl: "http://localhost:3000/static/media/avt.c92dec9d.jpg",
+    },
+    {
+      id: 2,
+      name: "anh deiit",
+      email: "deiit@gmail.com",
+      imageUrl: "adada",
+    },
+    {
+      id: 3,
+      name: "nam ngueyn",
+      email: "ngueyn@gmail.com",
+      imageUrl: "adasdass",
+    },
+  ];
+  const onDelete = (value) => {
+    console.log(value);
+  }
   return (
     <>
       <div className="overflow-x-auto mt-2 mb-10">
@@ -56,7 +91,13 @@ const AccountList = () => {
               </div>
             </div>
             <div className="bg-white shadow rounded overflow-auto border-b-4 border-r border-purple-400 border-opacity-25">
-              <table className="min-w-max w-full table-auto">
+              <TableAdmin
+                columns={columns}
+                dataTable={dataTable}
+                Url="/account/edit"
+                onDelete={onDelete}
+              />
+              {/* <table className="min-w-max w-full table-auto">
                 <thead>
                   <tr className="bg-blue-100 text-gray-600 uppercase text-sm leading-normal">
                     <th className="py-3 px-6 text-center w-[80px]">STT</th>
@@ -423,7 +464,7 @@ const AccountList = () => {
                     </td>
                   </tr>
                 </tbody>
-              </table>
+              </table> */}
             </div>
           </div>
         </div>
