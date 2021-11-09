@@ -11,223 +11,102 @@ const _nav = [
       text: "Home",
     },
   },
-  {
-    _tag: "CSidebarNavTitle",
-    _children: ["Quản lý tài khoản"],
-  },
-  {
-    _tag: "CSidebarNavDropdown",
-    name: "Account",
-    route: "/account",
-    icon: <i class="fas fa-user-alt max-w-1/3 pr-[30px]" style={{ maxWidth: "40px" }}></i>,
-    _children: [
-      {
-        _tag: "CSidebarNavItem",
-        icon: <i class="fas fa-list-ul pr-2 text-center"></i>,
-        name: "Danh sách",
-        to: "/account",
-      },
-      {
-        _tag: "CSidebarNavItem",
-        icon: <i class="fas fa-plus pr-2 text-center"></i>,
-        name: "Thêm mới",
-        to: "/account/add",
-      },
-    ],
-  },
-  {
-    _tag: "CSidebarNavDropdown",
-    name: "Chức vụ",
-    route: "/role",
-    icon: <i class="fas fa-user-tag max-w-1/3 pr-[30px]" style={{ maxWidth: "40px" }}></i>,
-    _children: [
-      {
-        _tag: "CSidebarNavItem",
-        icon: <i class="fas fa-list-ul pr-2 text-center"></i>,
-        name: "Danh sách",
-        to: "/role",
-      },
-      {
-        _tag: "CSidebarNavItem",
-        icon: <i class="fas fa-plus pr-2 text-center"></i>,
-        name: "Thêm mới",
-        to: "/role/add",
-      },
-    ],
-  },
+
   {
     _tag: "CSidebarNavTitle",
     _children: ["Quản lý License"],
   },
   {
-    _tag: "CSidebarNavDropdown",
-    name: "License",
-    route: "/license-key",
+    _tag: "CSidebarNavItem",
+    name: "LicenseKey",
+    to: "/license-key",
     icon: <i class="fas fa-key pr-[30px]" style={{ maxWidth: "40px" }}></i>,
-    _children: [
-      {
-        _tag: "CSidebarNavItem",
-        icon: <i class="fas fa-list-ul pr-2 text-center"></i>,
-        name: "Danh sách",
-        to: "/license-key",
-      },
-      {
-        _tag: "CSidebarNavItem",
-        icon: <i class="fas fa-plus pr-2 text-center"></i>,
-        name: "Thêm mới",
-        to: "/license-key/add",
-      },
-    ],
   },
 
   {
-    _tag: "CSidebarNavDropdown",
+    _tag: "CSidebarNavItem",
     name: "Danh mục",
-    route: "/license-key-category",
+    to: "/license-key-category",
     icon: <i class="fas fa-clock pr-[30px]" style={{ maxWidth: "40px" }}></i>,
-    _children: [
-      {
-        _tag: "CSidebarNavItem",
-        icon: <i class="fas fa-list-ul pr-2 text-center"></i>,
-        name: "Danh sách",
-        to: "/license-key-category",
-      },
-      {
-        _tag: "CSidebarNavItem",
-        icon: <i class="fas fa-plus pr-2 text-center"></i>,
-        name: "Thêm mới",
-        to: "/license-key-category/add",
-      },
-    ],
+  },
+  {
+    _tag: "CSidebarNavTitle",
+    _children: ["Quản lý tài khoản"],
+  },
+  {
+    _tag: "CSidebarNavItem",
+    name: "Account",
+    to: "/account",
+    icon: (
+      <i
+        class="fas fa-user-alt max-w-1/3 pr-[30px]"
+        style={{ maxWidth: "40px" }}
+      ></i>
+    ),
+  },
+  {
+    _tag: "CSidebarNavItem",
+    name: "Chức vụ",
+    to: "/role",
+    icon: (
+      <i
+        class="fas fa-user-tag max-w-1/3 pr-[30px]"
+        style={{ maxWidth: "40px" }}
+      ></i>
+    ),
   },
   {
     _tag: "CSidebarNavTitle",
     _children: ["Quản lý khách hàng"],
   },
   {
-    _tag: "CSidebarNavDropdown",
+    _tag: "CSidebarNavItem",
     name: "Khách hàng",
-    route: "/customer",
+    to: "/customer",
     icon: <i class="fas fa-users pr-[30px]" style={{ maxWidth: "40px" }}></i>,
-    _children: [
-      {
-        _tag: "CSidebarNavItem",
-        icon: <i class="fas fa-list-ul pr-2 text-center"></i>,
-        name: "Danh sách",
-        to: "/customer",
-      },
-      {
-        _tag: "CSidebarNavItem",
-        icon: <i class="fas fa-plus pr-2 text-center"></i>,
-        name: "Thêm mới",
-        to: "/customer/add",
-      },
-    ],
   },
   {
-    _tag: "CSidebarNavDropdown",
+    _tag: "CSidebarNavItem",
     name: "Phòng Ban",
-    route: "/department",
-    icon: <i class="fas fa-building pr-[30px]" style={{ maxWidth: "40px" }}></i>,
-    _children: [
-      {
-        _tag: "CSidebarNavItem",
-        icon: <i class="fas fa-list-ul pr-2 text-center"></i>,
-        name: "Danh sách",
-        to: "/department",
-      },
-      {
-        _tag: "CSidebarNavItem",
-        icon: <i class="fas fa-plus pr-2 text-center"></i>,
-        name: "Thêm mới",
-        to: "/department/add",
-      },
-    ],
+    to: "/department",
+    icon: (
+      <i class="fas fa-building pr-[30px]" style={{ maxWidth: "40px" }}></i>
+    ),
   },
   {
-    _tag: "CSidebarNavDropdown",
+    _tag: "CSidebarNavItem",
     name: "Tổ chức",
-    route: "/organization",
+    to: "/organization",
     icon: <i class="fas fa-sitemap pr-[30px]" style={{ maxWidth: "40px" }}></i>,
-    _children: [
-      {
-        _tag: "CSidebarNavItem",
-        icon: <i class="fas fa-list-ul pr-2 text-center"></i>,
-        name: "Danh sách",
-        to: "/organization",
-      },
-      {
-        _tag: "CSidebarNavItem",
-        icon: <i class="fas fa-plus pr-2 text-center"></i>,
-        name: "Thêm mới",
-        to: "/organization/add",
-      },
-    ],
   },
   {
-    _tag: "CSidebarNavDropdown",
+    _tag: "CSidebarNavItem",
     name: "Ưu tiên",
-    route: "/priority",
-    icon: <i class="fab fa-accessible-icon pr-[30px]" style={{ maxWidth: "40px" }}></i>,
-
-    _children: [
-      {
-        _tag: "CSidebarNavItem",
-        icon: <i class="fas fa-list-ul pr-2 text-center"></i>,
-        name: "Danh sách",
-        to: "/priority",
-      },
-      {
-        _tag: "CSidebarNavItem",
-        icon: <i class="fas fa-plus pr-2 text-center"></i>,
-        name: "Thêm mới",
-        to: "/priority/add",
-      },
-    ],
+    to: "/priority",
+    icon: (
+      <i
+        class="fab fa-accessible-icon pr-[30px]"
+        style={{ maxWidth: "40px" }}
+      ></i>
+    ),
   },
   {
     _tag: "CSidebarNavTitle",
     _children: ["Quản lý sản phẩm"],
   },
   {
-    _tag: "CSidebarNavDropdown",
+    _tag: "CSidebarNavItem",
     name: "Sản Phẩm",
-    route: "/product",
+    to: "/product",
     icon: <i class="fas fa-copy pr-[30px]" style={{ maxWidth: "40px" }}></i>,
-    _children: [
-      {
-        _tag: "CSidebarNavItem",
-        icon: <i class="fas fa-list-ul pr-2 text-center"></i>,
-        name: "Danh sách",
-        to: "/product",
-      },
-      {
-        _tag: "CSidebarNavItem",
-        icon: <i class="fas fa-plus pr-2 text-center"></i>,
-        name: "Thêm mới",
-        to: "/product/add",
-      },
-    ],
   },
   {
-    _tag: "CSidebarNavDropdown",
+    _tag: "CSidebarNavItem",
     name: "Version",
-    route: "/version",
-    icon: <i class="fas fa-code-branch pr-[30px]" style={{ maxWidth: "40px" }}></i>,
-    _children: [
-      {
-        _tag: "CSidebarNavItem",
-        icon: <i class="fas fa-list-ul pr-2 text-center"></i>,
-        name: "Danh sách",
-        to: "/version",
-      },
-      {
-        _tag: "CSidebarNavItem",
-        icon: <i class="fas fa-plus pr-2 text-center"></i>,
-        name: "Thêm mới",
-        to: "/version/add",
-      },
-    ],
+    to: "/version",
+    icon: (
+      <i class="fas fa-code-branch pr-[30px]" style={{ maxWidth: "40px" }}></i>
+    ),
   },
 ];
 

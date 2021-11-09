@@ -59,11 +59,9 @@ const LicenseKeyList = () => {
                 <thead>
                   <tr className="bg-blue-100 text-gray-600 uppercase text-sm leading-normal">
                     <th className="py-3 px-6 text-center w-[80px]">STT</th>
-                    <th className="py-3 px-6 text-left">Địa chỉ MAC</th>
                     <th className="py-3 px-6 text-left">Khách hàng</th>
                     <th className="py-3 px-6 text-center">Sản phẩm</th>
                     <th className="py-3 px-6 text-center">Danh mục</th>
-                    <th className="py-3 px-6 text-center">Phân loại</th>
                     <th className="py-3 px-6 text-center">Ngày kích hoạt</th>
                     <th className="py-3 px-6 text-center">Ngày hết hạn</th>
                     <th className="py-3 px-6 text-center">Trạng thái</th>
@@ -73,9 +71,7 @@ const LicenseKeyList = () => {
                 <tbody className="text-gray-600 text-sm font-light">
                   <tr className="border-b border-gray-200 hover:bg-gray-100">
                     <td className="py-2 px-6 text-center">1</td>
-                    <td className="py-2 px-6 text-left ">
-                      <span className="font-medium">123.198.456</span>
-                    </td>
+                    
                     <td className="py-2 px-6 text-left">
                       <span className="font-medium">Nguyễn Duy Việt Anh</span>
                     </td>
@@ -85,11 +81,7 @@ const LicenseKeyList = () => {
                     <td className="py-2 px-6 text-center">
                       <span className="font-medium">1 năm</span>
                     </td>
-                    <td className="py-2 px-6 text-center">
-                      <span className="font-medium bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs">
-                        Online
-                      </span>
-                    </td>
+                   
                     <td className="py-2 px-6 text-center">
                       <span className="font-medium">24/6/2021</span>
                     </td>
@@ -116,9 +108,7 @@ const LicenseKeyList = () => {
                   </tr>
                   <tr className="border-b border-gray-200 hover:bg-gray-100">
                     <td className="py-2 px-6 text-center">2</td>
-                    <td className="py-2 px-6 text-left ">
-                      <span className="font-medium">198.145.87</span>
-                    </td>
+                    
                     <td className="py-2 px-6 text-left">
                       <span className="font-medium">Ngô Bá Khá</span>
                     </td>
@@ -128,11 +118,7 @@ const LicenseKeyList = () => {
                     <td className="py-2 px-6 text-center">
                       <span className="font-medium">Dùng thử</span>
                     </td>
-                    <td className="py-2 px-6 text-center">
-                      <span className="font-medium bg-red-500 text-red-200 py-1 px-3 rounded-full text-xs">
-                        Offline
-                      </span>
-                    </td>
+                    
                     <td className="py-2 px-6 text-center">
                       <span className="font-medium">15/11/2021</span>
                     </td>
@@ -140,7 +126,7 @@ const LicenseKeyList = () => {
                       <span className="font-medium">15/11/2022</span>
                     </td>
                     <td className="py-2 px-6 text-center">
-                      <span className="font-medium bg-[#2f7c59] text-white py-2 px-3 rounded-xl text-xs">
+                      <span className="font-medium bg-yellow-400 text-white py-2 px-3 rounded-xl text-xs">
                         Còn 3 ngày
                       </span>
                     </td>
@@ -157,9 +143,7 @@ const LicenseKeyList = () => {
                   </tr>
                   <tr className="border-b border-gray-200 hover:bg-gray-100">
                     <td className="py-2 px-6 text-center">3</td>
-                    <td className="py-2 px-6 text-left ">
-                      <span className="font-medium">198.145.87</span>
-                    </td>
+                   
                     <td className="py-2 px-6 text-left">
                       <span className="font-medium">Giang Rồng</span>
                     </td>
@@ -169,11 +153,7 @@ const LicenseKeyList = () => {
                     <td className="py-2 px-6 text-center">
                       <span className="font-medium">Dùng thử</span>
                     </td>
-                    <td className="py-2 px-6 text-center">
-                      <span className="font-medium bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs">
-                        Online
-                      </span>
-                    </td>
+                   
                     <td className="py-2 px-6 text-center">
                       <span className="font-medium">05/11/2021</span>
                     </td>
@@ -198,9 +178,7 @@ const LicenseKeyList = () => {
                   </tr>
                   <tr className="border-b border-gray-200 hover:bg-gray-100">
                     <td className="py-2 px-6 text-center">4</td>
-                    <td className="py-2 px-6 text-left ">
-                      <span className="font-medium">123.198.456</span>
-                    </td>
+                    
                     <td className="py-2 px-6 text-left">
                       <span className="font-medium">Võ Thị Sáu</span>
                     </td>
@@ -210,11 +188,7 @@ const LicenseKeyList = () => {
                     <td className="py-2 px-6 text-center">
                       <span className="font-medium">Vĩnh viễn</span>
                     </td>
-                    <td className="py-2 px-6 text-center">
-                      <span className="font-medium bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs">
-                        Online
-                      </span>
-                    </td>
+                    
                     <td className="py-2 px-6 text-center">
                       <span className="font-medium">24/6/2021</span>
                     </td>
@@ -239,9 +213,7 @@ const LicenseKeyList = () => {
                   </tr>
                   <tr className="border-b border-gray-200 hover:bg-gray-100">
                     <td className="py-2 px-6 text-center">5</td>
-                    <td className="py-2 px-6 text-left ">
-                      <span className="font-medium">198.142.78</span>
-                    </td>
+                    
                     <td className="py-2 px-6 text-left">
                       <span className="font-medium">Lê Văn Công</span>
                     </td>
@@ -251,11 +223,7 @@ const LicenseKeyList = () => {
                     <td className="py-2 px-6 text-center">
                       <span className="font-medium">5 năm</span>
                     </td>
-                    <td className="py-2 px-6 text-center">
-                      <span className="font-medium bg-purple-200 text-purple-600 py-1 px-3 rounded-full text-xs">
-                        Online
-                      </span>
-                    </td>
+                    
                     <td className="py-2 px-6 text-center">
                       <span className="font-medium">24/6/2021</span>
                     </td>

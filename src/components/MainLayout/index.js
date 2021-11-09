@@ -1,11 +1,10 @@
-import TheContent from './TheContent'
-import TheFooter from './TheFooter'
-import TheHeader from './TheHeader'
-import TheHeaderDropdown from './TheHeaderDropdown'
-import TheHeaderDropdownNotif from './TheHeaderDropdownNotif'
-import TheHeaderDropdownTasks from './TheHeaderDropdownTasks'
-import TheLayout from './TheLayout'
-import TheSidebar from './TheSidebar'
+import TheContent from "./TheContent";
+import TheFooter from "./TheFooter";
+import TheHeader from "./TheHeader";
+import TheHeaderDropdown from "./TheHeaderDropdown";
+import TheHeaderDropdownNotif from "./TheHeaderDropdownNotif";
+import TheLayout from "./TheLayout";
+import TheSidebar from "./TheSidebar";
 
 export {
   TheContent,
@@ -13,7 +12,6 @@ export {
   TheHeader,
   TheHeaderDropdown,
   TheHeaderDropdownNotif,
-  TheHeaderDropdownTasks,
   TheLayout,
-  TheSidebar
-}
+  TheSidebar,
+};

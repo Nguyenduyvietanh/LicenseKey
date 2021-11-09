@@ -14,12 +14,7 @@ import {
 import CIcon from "@coreui/icons-react";
 import routes from "../../routers/routers";
 import { useLocation } from "react-router-dom";
-import {
-  TheHeaderDropdown,
-  TheHeaderDropdownMssg,
-  TheHeaderDropdownNotif,
-  TheHeaderDropdownTasks,
-} from "./index";
+import { TheHeaderDropdown, TheHeaderDropdownNotif } from "./index";
 import logo1 from "../../assets/image/logo.png";
 import "../../assets/css/TheHeader.css";
 
@@ -28,12 +23,16 @@ const TheHeader = () => {
   const sidebarShow = useSelector((state) => state.changeState.sidebarShow);
 
   const toggleSidebar = () => {
-    const val = [true, "responsive"].includes(sidebarShow) ? false : "responsive";
+    const val = [true, "responsive"].includes(sidebarShow)
+      ? false
+      : "responsive";
     dispatch({ type: "set", sidebarShow: val });
   };
 
   const toggleSidebarMobile = () => {
-    const val = [false, "responsive"].includes(sidebarShow) ? true : "responsive";
+    const val = [false, "responsive"].includes(sidebarShow)
+      ? true
+      : "responsive";
     dispatch({ type: "set", sidebarShow: val });
   };
   const location = useLocation().pathname;
@@ -42,8 +41,16 @@ const TheHeader = () => {
   return (
     <>
       <CHeader withSubheader>
-        <CToggler inHeader className="ml-md-3 d-lg-none" onClick={toggleSidebarMobile} />
-        <CToggler inHeader className="ml-3 d-md-down-none" onClick={toggleSidebar} />
+        <CToggler
+          inHeader
+          className="ml-md-3 d-lg-none"
+          onClick={toggleSidebarMobile}
+        />
+        <CToggler
+          inHeader
+          className="ml-3 d-md-down-none"
+          onClick={toggleSidebar}
+        />
         <CHeaderBrand className="mx-auto d-lg-none" to="/">
           <CIcon name="logo" src={logo1} alt="Logo" />
         </CHeaderBrand>
@@ -62,15 +69,19 @@ const TheHeader = () => {
 
         <CHeaderNav className="px-3">
           <TheHeaderDropdownNotif />
-          <TheHeaderDropdownTasks />
           <TheHeaderDropdown />
         </CHeaderNav>
       </CHeader>
       <div className="px-3 justify-content-between sm:mt-1 md:mt-6">
         <span className="md:ml-[14px] text-[15px] md:text-[28px] capitalize  text-purple-600 font-semibold font-serif">
-          {titlePage && titlePage.length > 0 ? titlePage[0]?.name : "Sửa thông tin"}
+          {titlePage && titlePage.length > 0
+            ? titlePage[0]?.name
+            : "Sửa thông tin"}
         </span>
-        <CBreadcrumbRouter className="border-0 m-0 px-0 px-md-3 font-thin" routes={routes} />
+        <CBreadcrumbRouter
+          className="border-0 m-0 px-0 px-md-3 font-thin"
+          routes={routes}
+        />
       </div>
     </>
   );
